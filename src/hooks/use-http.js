@@ -13,10 +13,8 @@ const useHttp = () => {
             {
                 method: requestSettings.method? requestSettings.method: 'GET',
                 body: requestSettings.body? requestSettings.body: null,
-                headers: requestSettings.headers? requestSettings.headers : {},
-
+                headers: requestSettings.headers? requestSettings.headers : {}
             }
-        //   'https://react-custom-hooks-28090-default-rtdb.europe-west1.firebasedatabase.app/tasks.json'
         );
   
         if (!response.ok) {
