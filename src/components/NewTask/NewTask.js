@@ -2,10 +2,13 @@ import { useState } from 'react';
 
 import Section from '../UI/Section';
 import TaskForm from './TaskForm';
+import useHttp from '../../hooks/use-http';
 
 const NewTask = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  // const {isLoading, error, processRequest} = useHttp();
 
   const enterTaskHandler = async (taskText) => {
     setIsLoading(true);
